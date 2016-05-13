@@ -47,7 +47,7 @@ void loop() {
     myStepper.step(stepsPerRevolution / 100); 
   }
 
-  displayNumber = motorSpeed;
+  displayNumber = motorSpeed*4;
 
   //whatever number you want to display, save it in displayNumber
   //update the display if the number changed, if not, dont update ----------------------

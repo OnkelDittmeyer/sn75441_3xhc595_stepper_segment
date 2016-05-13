@@ -96,7 +96,7 @@ void writeDisplayAll(int number) {
   }
   
   if(number <= 99){
-      writeRegAll(empty, convertNumber(number, 1), convertNumber(number, 2));
+      writeRegAll(convertNumber(0, 1), convertNumber(number, 1), convertNumber(number, 2));
   }
   
   writeRegAll(convertNumber(number, 1), convertNumber(number, 2), convertNumber(number, 3));
