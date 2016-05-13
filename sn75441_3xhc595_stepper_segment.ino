@@ -53,8 +53,7 @@ void loop() {
   if(lastDisplayNumber != displayNumber){
     /
     writeDisplayAll(displayNumber);
-
-    
+       
     lastDisplayNumber = displayNumber; 
   }
 

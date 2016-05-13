@@ -95,7 +95,7 @@ void writeDisplayAll(int number) {
     stringNumber = "0" + stringNumber;
   }
 
-  writeRegAll(convertNumber(number, 3), convertNumber(number, 2), convertNumber(number, 1));
+  writeRegAll(convertNumber(number, 1), convertNumber(number, 2), convertNumber(number, 3));
 
 }
 
