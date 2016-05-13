@@ -90,11 +90,10 @@ void writeReg(long regNum) {
 
 void writeDisplayAll(int number) {
 
-  String stringNumber = String(number);
-  if (stringNumber.length() == 2) {
-    stringNumber = "0" + stringNumber;
+  if(number <= 99){
+      writeRegAll(0b11111111, convertNumber(number, 1), convertNumber(number, 2));
   }
-
+  
   writeRegAll(convertNumber(number, 1), convertNumber(number, 2), convertNumber(number, 3));
 
 }
