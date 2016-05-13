@@ -47,18 +47,16 @@ void loop() {
     myStepper.step(stepsPerRevolution / 100); 
   }
 
+
+  //whatever number you want to display, save it in displayNumber
   //update the display if the number changed, if not, dont update ----------------------
   if(lastDisplayNumber != displayNumber){
-    // try all these functions on their own and check if anything changed
-    
-    //writeDisplay(4); //writes the standard functions
+    /
+    writeDisplayAll(displayNumber);
 
-    //writeRegAll(11101101, 10110000, 10101000); //writes all three numbers at the same time as binary, starts with the first digit 
-
-    //writeRegAll(convertNumber(123,3), convertNumber(123,2), convertNumber(123,1)); //convertNumber(number, position of number), this creates the binary dynamically
     
     lastDisplayNumber = displayNumber; 
-    }
+  }
 
   
 }
