@@ -89,7 +89,11 @@ void writeReg(long regNum) {
 }
 
 void writeDisplayAll(int number) {
+  if(number <= 9){
+          writeRegAll(0b11111111, 0b11111111, convertNumber(number, 1));
 
+  }
+  
   if(number <= 99){
       writeRegAll(0b11111111, convertNumber(number, 1), convertNumber(number, 2));
   }
