@@ -90,16 +90,18 @@ void writeReg(long regNum) {
 
 void writeDisplayAll(int number) {
   long empty = 0b11111111;
-  
-  if(number <= 9){
+
+
+  if(number >= 100){
+      writeRegAll(convertNumber(number, 1), convertNumber(number, 2), convertNumber(number, 3));
+  } else {
+    
+      if(number <= 9){
           writeRegAll(empty, empty, convertNumber(number, 1));
+      }else{
+          writeRegAll(empty, convertNumber(number, 1), convertNumber(number, 2));
+       }
   }
-  
-  if(number <= 99){
-      writeRegAll(convertNumber(0, 1), convertNumber(number, 1), convertNumber(number, 2));
-  }
-  
-  writeRegAll(convertNumber(number, 1), convertNumber(number, 2), convertNumber(number, 3));
 
 }
 
